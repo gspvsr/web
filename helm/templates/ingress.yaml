@@ -2,6 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: roboshop
+  namespace: roboshop
   annotations:
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/target-type: ip
@@ -11,9 +12,9 @@ spec:
   ingressClassName: alb
   rules:
   - host: "roboshop.gspaws.online"
-    http:
+  - http:
       paths:
-      - path: "/"
+      - path: /
         pathType: Prefix
         backend:
           service:
