@@ -8,6 +8,7 @@ metadata:
     alb.ingress.kubernetes.io/target-type: ip
     alb.ingress.kubernetes.io/tags: Environment=dev,Project=roboshop
     alb.ingress.kubernetes.io/group.name: gspvsr
+    alb.ingress.kubernetes.io/actions.404: '{"type":"fixed-response","fixedResponseConfig":{"statusCode":404,"contentType":"text/plain","content":"Not Found"}}'
 spec:
   ingressClassName: alb
   rules:
