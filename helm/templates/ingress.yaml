@@ -12,7 +12,7 @@ spec:
   ingressClassName: alb
   rules:
   - host: "roboshop.gspaws.online"
-  - http:
+    http:
       paths:
       - path: /
         pathType: Prefix
