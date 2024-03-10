@@ -12,12 +12,12 @@ spec:
   ingressClassName: alb
   rules:
   - host: "roboshop.gspaws.online"
-    http:
+  - http:
       paths:
       - path: /
         pathType: Prefix
         backend:
           service:
-            name: web
+            name: app1
             port:
               number: 80
