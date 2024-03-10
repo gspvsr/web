@@ -7,11 +7,11 @@ metadata:
         alb.ingress.kubernetes.io/scheme: internet-facing
         alb.ingress.kubernetes.io/target-type: ip
         alb.ingress.kubernetes.io/tags: Environment=dev,Project=roboshop
-        alb.ingress.kubernetes.io/group.name: gspvsr
+        alb.ingress.kubernetes.io/group.name: gspaws
 spec:
   ingressClassName: alb
   rules:
-  - host: "roboshop.gspvsr.online"
+  - host: "roboshop.gspaws.online"
     http:
       paths:
       - path: /
